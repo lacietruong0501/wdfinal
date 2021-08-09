@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*đây là cus button back to top*/
+
+button {
+	width: 55px;
+	height: 55px;
+	cursor: pointer;
+	background: #222A30;
+	border: none;
+	border-radius: 50%;
+	transition: 200ms;
+	
+}
+
+button svg {
+	fill: white;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+
+.btp button:hover {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	width: 80px;
+	height: 80px;
+}
+
+button:hover::before {
+	color: black;
+}
+
+button:hover svg {
+		animation: bounce 2s infinite linear;
+}
+
+@keyframes bounce {
+	0% {transform: translateX(-50%) translateY(-50%)}
+	25% {transform: translateX(-50%) translateY(-65%)}
+	50% {transform: translateX(-50%) translateY(-50%)}
+	75% {transform: translateX(-50%) translateY(-35%)}
+	100% {transform: translateX(-50%) translateY(-50%)}
+}
+
+button:focus {
+	outline: none;
+}
+/*hết button back to top */
+
+
